@@ -9,7 +9,7 @@
                 <button class="hover:bg-black hover:text-white hover:duration-300 w-28 h-12 bg-white rounded-2xl shadow-lg flex justify-center items-center font-bold">Category 4</button>
                 <button class="hover:bg-black hover:text-white hover:duration-300 w-28 h-12 bg-white rounded-2xl shadow-lg flex justify-center items-center font-bold">About Us</button>
             </div>
-            <div class="flex h-full w-[10%] items-center justify-between">
+            <div class="flex h-full w-[12%] items-center justify-between">
                 <img class="h-9" src="https://cdn-icons-png.flaticon.com/512/2838/2838895.png" alt="">
                 <img class="h-9" src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="">
                 <img class="h-9" src="https://cdn-icons-png.flaticon.com/512/149/149852.png" alt="">

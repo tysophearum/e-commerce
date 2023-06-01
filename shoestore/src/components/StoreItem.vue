@@ -11,7 +11,7 @@
 <script>
     export default {
         name: "StoreItem",
-        props: ['name', 'price', 'image', 'src'],
+        props: ['name', 'price', 'src'],
     }
     
 </script>
