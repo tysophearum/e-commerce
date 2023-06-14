@@ -1,5 +1,5 @@
 <template>
-    <div class="h-96 rounded-2xl bg-[#ffa405] m-4 flex items-center justify-center">
+    <div class="h-96 rounded-2xl bg-[#ffa405] mx-4 my-1 flex items-center justify-center">
         <div class="w-1/3 mx-10">
             <h1 class="text-7xl text-white font-bold drop-shadow-xl">NIKE AIR</h1>
             <p class="text-xl text-white my-6">
@@ -20,8 +20,6 @@
 <script>
 
 import StoreItem from '../components/StoreItem.vue'
-import { createApp } from 'vue';
-let Vue = createApp({})
 
 import axios from 'axios';
 
@@ -31,7 +29,7 @@ export default {
       products: undefined
     };
   },
-  name: "App",
+  name: "HomeContent",
   components: {
     StoreItem
   },

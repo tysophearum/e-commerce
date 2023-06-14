@@ -1,5 +1,5 @@
 <template>
-    <div class="h-20 bg-[#ffa405] rounded-2xl  px-4 py-3 flex justify-between m-4">
+    <div class="h-20 bg-[#ffa405] rounded-2xl  px-4 py-3 flex justify-between m-2">
         <div class="flex">
             <div class="mr-4">
                 <h2><span class="font-bold">PHEARUM</span> <span>COLLECTION</span></h2>
