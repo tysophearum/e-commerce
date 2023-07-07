@@ -1,28 +1,16 @@
-const multer = require("multer")
 const express = require("express")
 const router = express.Router()
 const Product = require("../model/product")
 const fs = require("fs")
+const upload = require('../middleware/upload')
 
-const Storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, "./uploads/images");
-    },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + file.originalname.replace(/\s+/g, ''));
-    },
-})
-
-const upload = multer({
-    storage: Storage
-})
 
 router.post("/", upload.single("image"), async (req, res) => {
     let newProduct = new Product({
         name: req.body.name,
         price: req.body.price,
         image: req.file.filename,
-        imageLink: "http://localhost:3000/images/" + req.file.filename
+        imageLink: "http://localhost:3001/images/" + req.file.filename
     })
 
     try {

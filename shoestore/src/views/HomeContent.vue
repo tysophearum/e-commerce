@@ -7,13 +7,19 @@
             </p>
             <button class="bg-black p-4 shadow-xl text-white font-bold rounded-2xl hover:bg-white hover:text-black hover:duration-300">VIEW COLLECTION</button>
         </div>
-        <img class="drop-shadow-lg mx-10" src="../img/shoe1.png" alt="shoe1.png">
+        <img class="drop-shadow-lg mx-10 relative" src="../img/shoe1.png" alt="shoe1.png">
     </div>
     <div class="bg-black mx-4 p-4 shadow-xl text-white font-bold rounded-2xl flex justify-center items-center">
-        <span class="mx-10"> Limited offer. 30% off on all products availeble in our store!!! </span><button class="mx-10 bg-white px-6 py-2 shadow-xl text-black font-bold rounded-2xl border-white border-2 hover:bg-black hover:text-white hover:border-white hover:duration-300">START SHOPPING</button>
+      <span class="mx-10"> Limited offer. 30% off on some products availeble in our store!!! </span>
+      <RouterLink to="/promotion">
+        <button class="mx-10 bg-white px-6 py-2 shadow-xl text-black font-bold rounded-2xl border-white border-2 hover:bg-black hover:text-white hover:border-white hover:duration-300">START SHOPPING</button>
+      </RouterLink>
     </div>
     <div class="grid grid-cols-5 gap-6 p-4">
-      <StoreItem v-for="product in products" :name="product.name" :price="product.price" :src="product.imageLink"></StoreItem>
+      <RouterLink to="/selectProduct">
+        <StoreItem name="NIKE GO FLYEASE" price="200.00" src="https://static.nike.com/a/images/t_default/fb70b7e2-5594-4382-a529-7b342057e6a6/go-flyease-easy-on-off-shoes-6nd2cc.png" />
+      </RouterLink>
+      
     </div>
 </template>
 
@@ -33,11 +39,11 @@ export default {
   components: {
     StoreItem
   },
-  mounted() {
-    this.fetchUsers();
-  },
+  // mounted() {
+  //   this.fetchProducts();
+  // },
   methods: {
-    fetchUsers() {
+    fetchProducts() {
       axios.get('http://localhost:3000/product/all')
         .then(response => {
           this.products = response.data;

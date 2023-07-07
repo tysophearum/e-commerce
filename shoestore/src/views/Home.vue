@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <Header></Header>
+  <Header class=" sticky top-0 z-10"/>
   <HomeContent></HomeContent>
   <Footer></Footer>
 </template>
